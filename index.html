@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Challange</title>
+</head>
+<body>
+    <h1 id="h3" style="display: none;">كنت اعرف</h1>
+    <h1 id="h4" style="display: none;">you shall enter the The Challange</h1>
+    <button id="btn1" onclick="btn1Clicked()">Yes</button>
+    <button id="btn2" onclick="btn2clicked()">No</button>
+     <h1 id="h5" style="display: none;"> do you fully understand that the king should watch anime whenever he wants to?</h1>
+    <button id="btn3" onclick="btn3Clicked()" style="display: none;">Yes</button>
+    <button id="btn4" onclick="btn4Clicked()" style="display: none;">No</button>
+    <button id="btn5" onclick="btn5Clicked()"style="display: none;">Yes</button>
+    <button id="btn6" onclick="btn6Clicked()"style="display: none;">No</button>
+
+
+    <img src="fire.gif" class="fire-overlay" id="img">
+    <img src="prank2.png" class="prank2" id="img2" style="display: none;">
+    <img src="prank3.png" class="prank3" id="img3" style="display: none;">
+    <audio id="sound1" src="sound.mp3"></audio>
+    <audio id="sound2" src="sound2.mp3"></audio>
+    <audio id="sound3" src="sound3.mp3" loop></audio>
+    <h1 id="h6" style="display: none;">hm You Manged to Get Here oh what did u eat hahahah u know Mange in french eat hahaa NEVERMIND Last Question!</h1>
+    <h1 id="h7" style="display: none;">Do You think Your Are worthy of the kings Present</h1>
+    <h1 id="h8" style="display: none;">Rules: 1-Trust Your King 2-belive in the king 3-Never think about the king school or homework</h1>
+    <h1 id="h9" style="display: none;">Congrats You Made it,NOW PICKUP UR WEAPON SOLDIER</h1>
+
+        <h1 id="h1">جاوب يا هذا</h1>
+        <h1 id="h2"> "THE SHADOW MONRACH" Do You Want To Enter The "The Shadow Monrach" The King Adham Challange?</h1>
+    
+    <script>
+          const btn6 = document.getElementById('btn6');
+        btn6.addEventListener('mousedown', function() {
+            const randomX = Math.random() * (window.innerWidth - 100);
+            const randomY = Math.random() * (window.innerHeight - 50);
+            btn6.style.position = 'fixed';
+            btn6.style.left = randomX + 'px';
+            btn6.style.top = randomY + 'px';
+        });
+          const btn5 = document.getElementById('btn5');
+        btn5.addEventListener('mousedown', function() {
+            const randomX = Math.random() * (window.innerWidth - 100);
+            const randomY = Math.random() * (window.innerHeight - 50);
+            btn5.style.position = 'fixed';
+            btn5.style.left = randomX + 'px';
+            btn5.style.top = randomY + 'px';
+        });
+
+        const btn2 = document.getElementById('btn2');
+        btn2.addEventListener('mousedown', function() {
+            const randomX = Math.random() * (window.innerWidth - 100);
+            const randomY = Math.random() * (window.innerHeight - 50);
+            btn2.style.position = 'fixed';
+            btn2.style.left = randomX + 'px';
+            btn2.style.top = randomY + 'px';
+        });
+        const btn4 = document.getElementById('btn4');
+        btn4.addEventListener('mousedown', function() {
+            const randomX = Math.random() * (window.innerWidth - 100);
+            const randomY = Math.random() * (window.innerHeight - 50);
+            btn4.style.position = 'fixed';
+            btn4.style.left = randomX + 'px';
+            btn4.style.top = randomY + 'px';
+        });
+
+        function btn1Clicked() {
+            document.getElementById("btn2").style.display ="none";
+            document.getElementById("btn1").style.display ="none";
+            document.getElementById("h1").style.display ="none";
+            document.getElementById("h2").style.display ="none";
+            document.getElementById("v1").style.display ="block";
+            document.getElementById("h3").style.display ="block";
+            document.getElementById("img").style.display ="none";
+            document.getElementById("v1").play();
+
+            setTimeout(function() {
+                document.getElementById("v1").style.display ="none";
+                document.getElementById("v1").pause();
+                document.getElementById('h3').style.display ="none";
+                document.getElementById("h4").style.display ="block";
+                document.getElementById("img2").style.display ="block";
+                document.getElementById("sound1").play();
+                document.getElementById("h5").style.display ="block";
+                document.getElementById("btn3").style.display = "block";
+                document.getElementById("btn4").style.display = "block";  
+            },17500);
+        }
+        function btn3Clicked() {
+            document.getElementById("h5").style.display="none";
+            document.getElementById("h4").style.display="none";
+            document.getElementById("img2").style.display="none";
+            document.getElementById("btn3").style.display="none";
+            document.getElementById("btn4").style.display="none";
+            document.getElementById("sound1").pause();
+            document.getElementById("v1").style.display="block";
+            document.getElementById("v1").play();
+            document.getElementById("v1").currentTime = 0;
+            document.getElementById("h3").style.display ="block";
+        
+            setTimeout(function() {
+                document.getElementById("v1").style.display="none";
+                document.getElementById("v1").pause();
+                document.getElementById("v1").currentTime = 0;
+                document.getElementById("h3").style.display ="none";
+                document.getElementById("h6").style.display ="block";
+                document.getElementById("h7").style.display ="block";
+                document.getElementById("img").style.display ="block";
+                document.getElementById("sound2").play();
+                document.getElementById("h8").style.display ="block";
+                document.getElementById("btn5").style.display="block";
+                document.getElementById("btn6").style.display="block";
+                setTimeout(function() {
+                    document.getElementById("h6").style.display="none"
+                    document.getElementById("h7").style.display ="none";
+                    document.getElementById("btn5").style.display="none";
+                    document.getElementById("btn6").style.display="none";
+                    document.getElementById("img").style.display ="none";
+                    document.getElementById("h9").style.display ="block";
+                    document.getElementById("img3").style.display ="block";
+                    document.getElementById("sound3").play();
+                    document.getElementById("h8").style.display ="none";
+        }, 30000);
+
+                },17500);
+                
+            }
+    </script>
+
+    <video id="v1" alt="bruh" loop preload="auto" playsinline style="display: none;">
+        <source src="prank.mp4" type="video/mp4">
+    </video>
+</body>
+</html>

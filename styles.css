@@ -1,0 +1,164 @@
+* { box-sizing: border-box; }
+html,body { height: 100%; }
+body {
+  background-color: black;
+  color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 10px 0;
+  text-align: center;
+  order: 1;
+}
+
+#h1 {
+  order: 1;
+}
+
+#h2 {
+  order: 2;
+  margin-bottom: 40px;
+}
+
+#h3, #h4, #h5, #h6, #h7, #h8, #h9 {
+  text-align: center;
+  margin: 5px 0;
+  width: 100%;
+  pointer-events: none;
+  position: relative;
+  z-index: 500;
+}
+
+#h3 { color: #ee0000; }
+#h4 { color: #ffcc00; display: none; }
+#h5 { color: #00f0ff; display: none; }
+#h6 { color: #ff6600; display: none; }
+#h7 { color: #00ff66; display: none; }
+#h8 { color: #6699ff; display: none; }
+#h9 { color: #ff0066; display: none; }
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.18s ease;
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+  margin: 10px;
+}
+
+button:hover { transform: scale(1.08); }
+
+#btn1 { 
+  background-color: #2ecc71; 
+  min-width: 80px;
+  order: 3;
+}
+
+#btn2 { 
+  background-color: #e74c3c; 
+  min-width: 80px;
+  order: 4;
+}
+
+#btn3 { 
+  background-color: #3498db; 
+  min-width: 80px;
+  order: 5;
+}
+
+#btn4 { 
+  background-color: #f39c12; 
+  min-width: 80px;
+  order: 6;
+}
+
+#btn5 { 
+  background-color: #9b59b6; 
+  min-width: 80px;
+  order: 7;
+}
+
+#btn6 { 
+  background-color: #1abc9c; 
+  min-width: 80px;
+  order: 8;
+}
+
+#btn2, #btn4, #btn5, #btn6 {
+  transition: left 0.38s cubic-bezier(.2,.8,.2,1), top 0.38s cubic-bezier(.2,.8,.2,1);
+}
+
+.fire-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+#v1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 50;
+  background-color: black;
+}
+
+img {
+  display: block;
+  margin: 20px auto 0 auto;
+  max-width: 90%;
+  height: auto;
+}
+
+.prank2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70%;
+  max-height: 70%;
+  z-index: 100;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  #h1, #h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+  
+  #h1, #h2 {
+    font-size: 16px;
+  }
+  
+  button { 
+    padding: 10px 14px; 
+    font-size: 15px; 
+  }
+}
